@@ -1,11 +1,109 @@
-<html>
-    <head>
-        <title>Sample Website</title>
-    </head>
-    <body style="text-align:center;font-family:Verdana;margin:1%;">
-        <h1 style="color:navy">Welcome to Our Website!</h1>
-        <hr>
-        <p>This is a simple, static website that we deploy by creating a pipeline on AWS CodePipeline.</p>
-        <h2>Website Version: 3.2</h2>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Website</title>
+  <style>
+    /* Reset and base styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: navy;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 5px solid #4fc3f7;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+    }
+    .card h2 {
+      color: #1565c0;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .card p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .version {
+      display: inline-block;
+      background: #1565c0;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 2px solid #ddd;
+    }
+    footer a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Website!</h1>
+    <p>A modern static site deployed with Jenkins & Docker</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Deployment Successful 🎉</h2>
+      <p>This page is styled with attractive CSS and served from an Nginx container.</p>
+      <span class="version">Website Version: 3.2</span>
+    </div>
+  </main>
+
+  <footer>
+    <p>Powered by <a href="#">Jenkins</a> | <a href="#">Docker</a> | <a href="#">AWS</a></p>
+  </footer>
+</body>
 </html>
+
